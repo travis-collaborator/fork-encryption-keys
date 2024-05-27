@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.8"
+
+env:
+  global:
+    - secure: "YOUR_ENCRYPTED_VALUE"  # This should be your actual encrypted value
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt
+
+# Run tests
+script:
+  - pytest
