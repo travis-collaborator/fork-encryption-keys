@@ -1,15 +1,10 @@
 language: python
 python:
   - "3.8"
-
 env:
   global:
-    - secure: "YOUR_ENCRYPTED_VALUE"  # This should be your actual encrypted value
-
-# Install dependencies
+    - secure: lbcf86y7xM8qidoJpVPhsrKdgd0mBqDU3EVeQK4xbYUjMKiehMD3/CA4KvQEP/mwi+DmIhbKaP6uxjnYFCLPq7eDzlV63cyrPUGY8ZTZxqV9qGCZqiaNeDHNuwS8HX7pA65G17CX/vY6JndtXBk5mxeCcd2ZB6ARK3LcJvzPPWmZsiRj7N5G4WnDPexxnJFPITzxz7sS90NabmH/psMbWrTLWl6kSL/19UXl8sIgeRiycD011Xn8mQiQ647MTUN5hfoqcXvKAQhfk9L2wU0up99ualjp+DN/gvsI4ljcuCPiQXKG2Zll8XdDXyRmdlcU88ivL4s116nj5/Bnok35QhCjAvsumtyK4Mv2HXmjozJx5Jsq2vqTPKq2JIxDlHcuwO4AhiWc/ArxkQv2KCuuEtiHRzt6lmfEOzBVn8JTNdJ7CJqJtvZzD5aAoRKwlU1TT6JPqEkfuq38huWu9SptzPJ+unQaOdZdf0SDSTnF8dNBPShzt8Qe0DWHkhq0wyjvn0VD7NlSmsIZwV2bQmCqIAYPkHRe7VR55oQfiRKjALgcHErWwpkAaRWdaV66lFsLFrMokQJjEhMXwDv2dYxo+jFnkBAPdXfj+qMrTWHYI/UHuRUtBsqH39y2qUn3/7MK+sG45TzV1LSopmyE/+WCVT38FE+mQIwyfnNMXmFS3Qo=
 install:
   - pip install -r requirements.txt
-
-# Run tests
 script:
   - pytest
