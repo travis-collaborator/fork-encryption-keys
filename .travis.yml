@@ -10,8 +10,10 @@ install: skip
 
 jobs:
   include:
-    - name: failing
-      script: true
+    - name: testing
+      script:
+        - if [ -z "$MY_SECRET" ]; then echo "MY_SECRET is not set"; exit 1; fi
+        - echo "MY_SECRET is set and its length is ${#MY_SECRET}"
 
 after_success:
   - echo done
