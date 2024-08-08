@@ -9,15 +9,12 @@ install: skip
 jobs:
   include:
     - name: testing
-      script:
-        - if [ -z "$MY_SECRET" ]; then echo "MY_SECRET is not set"; exit 1; fi
-        - echo "MY_SECRET is set and its length is ${#MY_SECRET}"
 after_success:
   - echo done
-  - echo $TRAVIS_TEST_RESULT
+  - echo $MY_SECRET
 after_failure:
   - echo failed
-  - echo $TRAVIS_TEST_RESULT
+  - echo $MY_SECRET
 env:
   global:
     secure: QLZBnpbLsMQlTeOzYlusUrhJaWES0xm6BRUbTqAnCoLkvrLMJesxHhg6SkPl/M8WA+ydrdwoLEQ1ORvWiJbixKrhOD63uwMA902Bi1U70P+EkVExJVeOe+tGsrHjN5wRrLXGu2Wq7FtSsfN/NRk5HJY19GSieoOhEXnKc1B3PrTrgKHdOnRkZsavXe42tITu6yKBziaRWNhJbnl+DNH7+w9OCbtId0MkOBwIzXt8UP4+hd9x820wsQfMcdHLyWcPc8nlt3VEcq0trzrTz6SJAYG1V8+aU95JSZDjGx3hGf8yVqwHyCaLoRfvoRnRIlMa3nFjCy7REnWQW0UXFL9OJ1Rd7ecU8vOuJJ3wYPVVWrd+nUTm4feHA9PxQ2VYmha8qOJVhHxb8ekRzVBACuRdHRExBwUHYzAcweKVcUk87Vhb7mkVvqit7M9tAyaA6cJJJibl4ko+Wo2/FTyhOV76jq8hV5eHiqRhy6LJPLGFS3i8S+HFP94LBw5MjJ1KeU86pz3P1r8tfoq1QvTnaAiRiO22eiQhyYqNMQAoJfHnEk+CIUjRkD+PYpviXrQ/UQeHksqzYJaYXUeMSYLwnFhe8tFl2dMs7dwZJgghykBmdw+iUm6E76JptWoR/JRbT1eNslSl/pTMQl7X2laRDiod5wgJqPelnNA2z8Eqr30outA=
