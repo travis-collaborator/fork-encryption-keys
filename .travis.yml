@@ -11,17 +11,16 @@ install: skip
 
 jobs:
   include:
-    - name: failing
-      script: true
+    - name: testing
+      script:
+        - echo $MY_SECRET
 
 after_success:
   - echo done
   - echo $TRAVIS_TEST_RESULT
-  - echo $MY_SECRET
 after_failure:
   - echo failed
   - echo $TRAVIS_TEST_RESULT
-  - echo $MY_SECRET
   
 env:
   global:
